@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container d-flex justify-content-center align-items-center bg-image">
+		<div class="text-center from-top">
+            <div id="display" class="text-light push-64">
+                click a tooth
+            </div>
+            {% for i in range(0, 14) %}
+            <button id="myButton{{ i }}"
+                    class="btn btn-light
+
+                    {% if i == 1 or i == 12%}
+                        push-32
+                    {% endif %}
+                    {% if i == 2 or i == 11%}
+                        push-64
+                    {% endif %}
+                    {% if i > 2 and i < 12 %}
+                        push-64
+                    {% endif %}
+                    "
+                    onClick="buttonClicker({{ i }})">
+                    {{ i }}</button>
+            {% endfor %}
+        </div>
+    </div>
+    <div id="background-image-container" class="container d-flex justify-content-center align-items-center bg-image1">
+    </div>
+    <script src="/static/app.js"></script>
+</body>
+</html>

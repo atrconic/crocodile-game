@@ -1,0 +1,28 @@
+.bg-image {
+    background-image: url('/static/crocodile.png');
+    background-size: cover;
+    background-position: center;
+    height: 800px; /* Set the height of the element */
+}
+.bg-image1 {
+    background-image: url('/static/scaryc.png');
+    background-size: cover;
+    background-position: center;
+    height: 800px; /* Set the height of the element */
+}
+.btn-height {
+    height: 50px;
+}
+.from-top {
+    margin-top: 96px;
+}
+.push-32 {
+    margin-top: 32px;
+}
+.push-64 {
+    margin-top: 64px;
+}
+.push-16 {
+    margin-top: 16px;
+}
+

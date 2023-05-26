@@ -2,6 +2,8 @@
 //kadgod se ucita stranica, ucitaj i prikazi random
 var myRandom = null
 
+var audioElement = document.createElement('audio');
+
 function getRandom() {
      $.ajax({
         url: "/random",
@@ -20,9 +22,10 @@ function getRandom() {
     });
 }
 
-function changeBackgroundImage() {
-  var backgroundImageContainer = document.getElementById("background-image-container");
-  backgroundImageContainer.style.backgroundImage = "url('scaryC.jpg')";
+function changeBackgroundImage(){
+    $('#crocodile').removeClass("bg-image")
+    $('#crocodile').addClass("bg-image1")
+//    $("#crocodile").css("background-image", "url('/static/scaryC.jpg')");
 }
 
 function buttonClicker(index) {
@@ -31,7 +34,7 @@ function buttonClicker(index) {
         disabledTeeth()
         changeBackgroundImage()
         $("#display").html("<b>kraj igre</b>")
-
+         audioElement.play();
     } else {
         $("#myButton" + index).prop('disabled', true)
     }
@@ -47,5 +50,9 @@ $(document).ready(function(){
     getRandom()
     $("#myButton0").click(getRandom)
     $("#myButton1").click(getRandom)
+
+    audioElement.setAttribute('src', '/static/roar.wav');
+    audioElement.setAttribute('muted', 'muted');
+
 })
 

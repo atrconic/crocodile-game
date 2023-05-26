@@ -2,13 +2,13 @@
     background-image: url('/static/crocodile.png');
     background-size: cover;
     background-position: center;
-    height: 800px; /* Set the height of the element */
+    height: 800px;
 }
 .bg-image1 {
-    background-image: url('/static/scaryc.png');
+    background-image: url('/static/scaryC.jpg');
     background-size: cover;
     background-position: center;
-    height: 800px; /* Set the height of the element */
+    height: 600px;
 }
 .btn-height {
     height: 50px;
